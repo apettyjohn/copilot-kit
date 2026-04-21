@@ -11,7 +11,7 @@ from .tools.backend import get_weather
 from .tools.frontend import add_proverb, set_theme_color
 
 agent = Agent(
-    model=OpenRouter(id="x-ai/grok-4.1-fast"),
+    model=OpenRouter(id="x-ai/grok-4.1-fast", max_tokens=1500000),
     tools=[
         # Example of backend tools, defined and handled in your agno agent
         YFinanceTools(),
